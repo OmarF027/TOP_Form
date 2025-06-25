@@ -1,0 +1,1 @@
+Questa pagina permette all’utente di registrarsi inserendo nome, cognome, email, telefono e password con conferma.  Il design è basato su un tema scuro con colori prevalenti nero e blu, e include un’immagine di sfondo nella sidebar.
