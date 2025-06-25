@@ -1,0 +1,172 @@
+/* Font Roboto import già presente nell'HTML */
+
+/* Reset base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  background: #000;
+  color: #e0e0e0;
+}
+
+/* Layout principale */
+body {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  flex: 1;
+  position: relative;
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 300px;
+}
+
+.sidebar-overlay {
+  background-color: rgba(0, 0, 0, 0.65);
+  color: #2196f3; /* blu acceso */
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 1rem 2rem;
+  border: 3px solid #2196f3;
+  border-radius: 12px;
+  user-select: none;
+}
+
+/* Form section */
+.form-section {
+  flex: 2;
+  background-color: #121212;
+  padding: 3rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: -4px 0 20px rgba(33, 150, 243, 0.3);
+  min-width: 350px;
+}
+
+.form-section h1 {
+  color: #2196f3;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  font-size: 2.8rem;
+  letter-spacing: 1px;
+}
+
+/* Form styles */
+form {
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.8rem;
+  flex-wrap: wrap;
+}
+
+.form-control {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #b3b3b3;
+  user-select: none;
+}
+
+input {
+  padding: 0.6rem 1rem;
+  border: 2px solid #333;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input::placeholder {
+  color: #555;
+}
+
+input:focus {
+  outline: none;
+  border-color: #2196f3;
+  box-shadow: 0 0 6px #2196f3;
+}
+
+/* Button */
+.submit-btn {
+  width: 100%;
+  padding: 1.1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #000;
+  background-color: #2196f3;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+  background-color: #0d47a1;
+  outline: none;
+}
+
+/* Link sotto il form */
+.login-text {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #777;
+}
+
+.login-text a {
+  color: #2196f3;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.login-text a:hover,
+.login-text a:focus {
+  color: #0d47a1;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    min-height: 200px;
+    min-width: 100%;
+  }
+
+  .form-section {
+    padding: 2rem 2rem;
+    min-width: 100%;
+  }
+
+  .form-group {
+    flex-direction: column;
+  }
+}
